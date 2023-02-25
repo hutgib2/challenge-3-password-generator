@@ -19,8 +19,37 @@ The length of a password must be at least 8 characters and no more than 128 char
     return "Try again";
   }
 
+  let characters = "";
+
+  var lowercaseAnswer = prompt("The character types are lowercase, uppercase, numeric, and/or special characters.\n\n\
+Would you like to include lowercase? (yes/no)");
+
+  // if they answer yet, add lowercase letters to the characters string
+  if (lowercaseAnswer == "yes")
+    characters += lowercase
+
+  var uppercaseAnswer = prompt("The character types are lowercase, uppercase, numeric, and/or special characters.\n\n\
+Would you like to include uppercase? (yes/no)");
+  
+  // if they answer yet, add these letters to the characters string
+  if (uppercaseAnswer == "yes")
+    characters += uppercase
+
+  var numberAnswer = prompt("The character types are lowercase, uppercase, numeric, and/or special characters.\n\n\
+Would you like to include numbers? (yes/no)");
+  
+  // if they answer yet, add these letters to the characters string
+  if (numberAnswer == "yes")
+    characters += numeric
+
+  var specialcharactersAnswer = prompt("The character types are lowercase, uppercase, numeric, and/or special characters.\n\n\
+Would you like to include special characters? (yes/no)");
+  
+  // if they answer yet, add these letters to the characters string
+  if (specialcharactersAnswer == "yes")
+    characters += specialcharacters
+
   let password = "";
-  var characters = lowercase;
   var numOfCharacters = characters.length;
 
   let i = 0;
