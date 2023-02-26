@@ -14,8 +14,15 @@ function generatePassword() {
   var length = prompt("Enter the length of the password.\n\n\
 The length of a password must be at least 8 characters and no more than 128 characters");
 
+  if (isNaN(length)) {
+    var errorMsg = "EError: The length must be a number";
+    alert(errorMsg);
+    return "Try again";
+  }
+
   if (length < 8 || length > 128) {
-    alert("Error: The length of a password must be at least 8 characters and no more than 128 characters");
+    var errorMsg = "Error: The length of a password must be at least 8 characters and no more than 128 characters";
+    alert(errorMsg);
     return "Try again";
   }
 
@@ -24,19 +31,37 @@ The length of a password must be at least 8 characters and no more than 128 char
   var lowercaseAnswer = prompt("The character types are lowercase, uppercase, numeric, and/or special characters.\n\n\
 Would you like to include lowercase? (yes/no)");
 
+  if (lowercaseAnswer != "yes" && lowercaseAnswer != "no") {
+    var errorMsg = "Error: Answer is not yes or no";
+    alert(errorMsg);
+    return "Try again";
+  }
+
   // if they answer yet, add lowercase letters to the characters string
   if (lowercaseAnswer == "yes")
     characters += lowercase
 
   var uppercaseAnswer = prompt("The character types are lowercase, uppercase, numeric, and/or special characters.\n\n\
 Would you like to include uppercase? (yes/no)");
-  
+
+if (uppercaseAnswer != "yes" && lowercaseAnswer != "no") {
+  var errorMsg = "Error: Answer is not yes or no";
+  alert(errorMsg);
+  return "Try again";
+}
+
   // if they answer yet, add these letters to the characters string
   if (uppercaseAnswer == "yes")
     characters += uppercase
 
   var numberAnswer = prompt("The character types are lowercase, uppercase, numeric, and/or special characters.\n\n\
 Would you like to include numbers? (yes/no)");
+
+if (numberAnswer != "yes" && numberAnswer != "no") {
+  var errorMsg = "Error: Answer is not yes or no";
+  alert(errorMsg);
+  return "Try again";
+}
   
   // if they answer yet, add these letters to the characters string
   if (numberAnswer == "yes")
@@ -44,6 +69,12 @@ Would you like to include numbers? (yes/no)");
 
   var specialcharactersAnswer = prompt("The character types are lowercase, uppercase, numeric, and/or special characters.\n\n\
 Would you like to include special characters? (yes/no)");
+
+  if (specialcharactersAnswer != "yes" && specialcharactersAnswer != "no") {
+    var errorMsg = "Error: Answer is not yes or no";
+    alert(errorMsg);
+    return "Try again";
+  }
   
   // if they answer yet, add these letters to the characters string
   if (specialcharactersAnswer == "yes")
