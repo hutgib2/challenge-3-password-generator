@@ -11,11 +11,11 @@ function generatePassword() {
   var numeric = "01234556789";
   var specialcharacters =" !\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~";
 
-  var length = prompt("Enter the length of the password.\n\n\
-The length of a password must be at least 8 characters and no more than 128 characters");
+  var length = prompt("How long do you want the password to be?\n\n\
+Enter a number between 8 and 128, eg. 12");
 
   if (isNaN(length)) {
-    var errorMsg = "EError: The length must be a number";
+    var errorMsg = "Error: The length must be a number";
     alert(errorMsg);
     return "Try again";
   }
