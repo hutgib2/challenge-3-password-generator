@@ -44,7 +44,7 @@ Would you like to include lowercase? (yes/no)");
   var uppercaseAnswer = prompt("The character types are lowercase, uppercase, numeric, and/or special characters.\n\n\
 Would you like to include uppercase? (yes/no)");
 
-if (uppercaseAnswer != "yes" && lowercaseAnswer != "no") {
+if (uppercaseAnswer != "yes" && uppercaseAnswer != "no") {
   var errorMsg = "Error: Answer is not yes or no";
   alert(errorMsg);
   return "Try again";
@@ -79,6 +79,11 @@ Would you like to include special characters? (yes/no)");
   // if they answer yet, add these letters to the characters string
   if (specialcharactersAnswer == "yes")
     characters += specialcharacters
+
+  if (characters == "") {
+    alert("Error: you said no for all of them");
+    return "Try again";
+  }
 
   let password = "";
   var numOfCharacters = characters.length;
