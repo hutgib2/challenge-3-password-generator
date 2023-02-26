@@ -2,12 +2,19 @@
 
 ## Description
 - My motivation was to make a password generator for protection
-- This assignment used existing code and i made some changes so it works better
+- This assignment used existing code and I made some changes so it works better
 
 Learning objectives
 - Add number and special characters
 - Prompting users and error handling
 - Making a limit between 8 and 128
+
+## Screenshot of Application
+
+![screenshot of application](/images/app.PNG "application main page")
+
+## Link to the deployed application
+https://hutgib2.github.io/challenge-3-password-generator/
 
 ## Installation
 Clone the GitHub repository onto your computer using the command
